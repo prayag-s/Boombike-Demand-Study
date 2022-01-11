@@ -3,7 +3,7 @@
    <p align="right">By Prayag Sanjay</p>
 
 ## Problem Statement
-	As a result of recent Corona pandemic, US bike-sharing provider BoomBikes are
+   As a result of recent Corona pandemic, US bike-sharing provider BoomBikes are
   experiencing considerable drop in their revenues,
   making it very difficult to survive in the current market scenario.
 	As a part of a clever business plan to up its revenue it wants capitalise on the
@@ -22,7 +22,7 @@
 
 ## Data Set
 	We are give a dataset on daily bike rental across America and various probable factors
-  affecting the bike rental such as a weather conditions, day types such as weekend, holiday and rental type.
+	affecting the bike rental such as a weather conditions, day types such as weekend, holiday and rental type.
 
 ## Approach
 	From the problem statement, we can see following characterstics
@@ -54,55 +54,55 @@
 
 	Following variables are significant
 
-	**Temperature of the day**
+	Temperature of the day
 
-	**Year of rental**
+	Year of rental
 
-	**Type of weather** (summer, winter)
+	Type of weather (summer, winter)
 
-	**Month of the year** (in particular September)
+	Month of the year (in particular September)
 
-	**Week day** (specially Sunday)
+	Week day (specially Sunday)
 
-	**Season** (in particular summer and winter)
+	Season (in particular summer and winter)
 
-	**Windspeed**
+	Windspeed
 
-	**Weather** (in particular Misty and Cloudy or Light Snow or Thunderstorm)
+	Weather (in particular Misty and Cloudy or Light Snow or Thunderstorm)
 
 ### Dynamics of the demand
 
 	Based up on above variables and their coefficients, we can group drivers variables in following groups
 
-	**Positive Drivers**
+	Positive Drivers
 
 	These variables increase the demand for the rental. So company should check and the plan the stock for these days
 
-	-  **Temperature of the day** (Coeff 0.5672) - This has got big impact of the demand.
+	-  Temperature of the day (Coeff 0.5672) - This has got big impact of the demand.
      Higher the temperature higher is the demand.
 
-	-  **Year**  (Coeff 0.2335) - Model shows that there is natural increase in demand from one year to another.
+	-  Year  (Coeff 0.2335) - Model shows that there is natural increase in demand from one year to another.
       Probably with growing population and awareness for health. So company can plan to increase production to meet this.
 
-	- **Week day 6 or Sunday** (Coeff 0.0246) - This is a weak indicator that demand is more on Sunday being a holiday.
+	- Week day 6 or Sunday (Coeff 0.0246) - This is a weak indicator that demand is more on Sunday being a holiday.
 
-	- **Season** (Coeff 0.0871), - Rental increases particularly in summer and winter as well (Coeff, 0.1254)
+	- Season (Coeff 0.0871), - Rental increases particularly in summer and winter as well (Coeff, 0.1254)
 
-	- **Month (September)** (Coeff 0.0790) - There is variatin with month, with september month being strongest in terms of increase in demand
+	- Month (September) (Coeff 0.0790) - There is variatin with month, with september month being strongest in terms of increase in demand
 
-	**Negative Drivers**
+	Negative Drivers
 
 	These variables decrease the demand for the rental. So company should check and plan for the lean days.
 
-	- **Adverse weather days** (Coeff -0.2631 and - 0.0781)) - On bad weather days particularly 
+	- Adverse weather days (Coeff -0.2631 and - 0.0781)) - On bad weather days particularly 
      Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds, demand is very low.
 
-	- **Wind speed** (Coeff -0.155), on higer wind speed days demand decreases perhaps due wind chill factor or wind resistance.
+	- Wind speed (Coeff -0.155), on higer wind speed days demand decreases perhaps due wind chill factor or wind resistance.
 
 ### Model to describe the demand
 
 	The model is
 
-	$ count = 0.103 \times constant + 0.2335  \times  year + 0.5672  \times  temperature + 0.0871 \times summer +
-            0.1245 \times winter + 0.0790 \times september + 0.0246 \times weekday_6 - 0.155 \times windspeed - 0.0078 \times Mist and Cloudy
-            - 0.2631 \times Light Snow and Storms $
+	  count = 0.103 * constant + 0.2335  * year + 0.5672 * temperature + 0.0871 * summer +
+            	  0.1245 * winter + 0.0790 * september + 0.0246 * weekday_6 - 0.155 * windspeed - 0.0078 * Mist and Cloudy
+            	  - 0.2631 * Light Snow and Storms 
